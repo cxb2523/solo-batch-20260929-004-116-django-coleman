@@ -1,5 +1,5 @@
 from django.contrib.auth.models import User
-from rest_framework import serializers, viewsets
+from rest_framework import serializers
 from partner.serializers import PartnerSerializer
 from .models import Task
 
@@ -31,8 +31,3 @@ class TaskSerializer(serializers.HyperlinkedModelSerializer):
             'state',
             'created_at',
         )
-
-
-class TaskViewSet(viewsets.ModelViewSet):
-    queryset = Task.objects.all()
-    serializer_class = TaskSerializer

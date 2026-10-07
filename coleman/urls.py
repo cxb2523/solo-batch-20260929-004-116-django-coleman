@@ -20,7 +20,7 @@ from django.http import HttpResponseRedirect
 
 # Rest API
 from rest_framework import routers
-from mtasks.serializers import TaskViewSet
+from mtasks.views import TaskViewSet
 
 router = routers.DefaultRouter()
 router.register(r'tasks', TaskViewSet)
